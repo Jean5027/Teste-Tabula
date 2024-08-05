@@ -25,9 +25,9 @@
                 <td>{{ $user->phone }}</td>
                 <td>{{ $user->address }}</td>
                 <td>
-                    <a href="{{ route('show', $user->id) }}">Ver</a>
-                    <a href="{{ route('edit', $user->id) }}">Editar</a>
-                    <form action="{{ route('destroy', $user->id) }}" method="POST">
+                    <a href="{{ route('show', $user) }}">Ver</a>
+                    <a href="{{ route('edit', $user) }}">Editar</a>
+                    <form action="{{ route('destroy', $user) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit">Deletar</button>

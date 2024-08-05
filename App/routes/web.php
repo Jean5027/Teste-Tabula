@@ -9,11 +9,11 @@ Route::get('/criar', [UserController::class,'create'])->name('create');
 
 Route::post('/criar', [UserController::class,'store'])->name('store');
 
-Route::get('/{id}', [UserController::class,'show'])->name('show');
+Route::get('/{user}', [UserController::class,'show'])->name('show');
 
-Route::get('/editar', [UserController::class,'edit'])->name('edit');
+Route::get('/{user}/editar', [UserController::class,'edit'])->name('edit');
 
-Route::get('/editar/{id}', [UserController::class,'update'])->name('update');
+Route::put('/editar/{user}', [UserController::class,'update'])->name('update');
 
-Route::delete('/deletar/{id}', [UserController::class,'destroy'])->name('destroy');
+Route::delete('/deletar/{user}', [UserController::class,'destroy'])->name('destroy');
 
