@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Criar usuário</h1>
-    <form action="{{ route('create') }}" method="POST">
+    <form action="{{ route('create') }}" method="POST" class="input">
         @csrf
         <label>Nome</label>
         <input type="text" name="name" required>
@@ -16,7 +16,7 @@
         <input type="password" name="password" required>
         <label>Endereço</label>
         <textarea name="address" required></textarea>
-        <button type="submit">Criar</button>
+        <button type="submit" class="create">Criar</button>
     </form>
 @endsection
 
